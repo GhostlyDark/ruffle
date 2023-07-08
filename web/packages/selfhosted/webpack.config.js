@@ -56,19 +56,5 @@ module.exports = (_env, _argv) => {
                 }),
             ],
         },
-        devtool: "source-map",
-        plugins: [
-            new CopyPlugin({
-                patterns: [
-                    {
-                        from: "npm-package.json5",
-                        to: "package.json",
-                        transform: transformPackage,
-                    },
-                    { from: "LICENSE*" },
-                    { from: "README.md" },
-                ],
-            }),
-        ],
     };
 };
